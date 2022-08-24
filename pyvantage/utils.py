@@ -1,6 +1,14 @@
 from enum import Enum
 
-__all__ = ("APIFunction", "DataType", "InvalidAPIKey", "Interval", "parse_url", "OutputSize",)
+__all__ = (
+    "APIFunction",
+    "DataType",
+    "InvalidAPIKey",
+    "Interval",
+    "parse_url",
+    "OutputSize",
+)
+
 
 def parse_url(url: str, **kwargs) -> str:
     new_url = url
@@ -15,12 +23,15 @@ def parse_url(url: str, **kwargs) -> str:
         new_url += f"{key}={converted_value}"
     return new_url
 
+
 class InvalidAPIKey(ValueError):
     pass
+
 
 class EnumStr(Enum):
     def __str__(self) -> str:
         return self.value
+
 
 class APIFunction(EnumStr):
     TIME_SERIES_INTRADAY = "TIME_SERIES_INTRADAY"
@@ -29,6 +40,7 @@ class APIFunction(EnumStr):
     TIME_SERIES_MONTHLY = "TIME_SERIES_MONTHLY"
     SYMBOL_SEARCH = "SYMBOL_SEARCH"
 
+
 class Interval(EnumStr):
     ONE_MIN = "1min"
     FIVE_MINS = "5min"
@@ -36,9 +48,11 @@ class Interval(EnumStr):
     THIRTY_MINS = "30min"
     SIXTY_MINS = "60min"
 
+
 class OutputSize(EnumStr):
     COMPACT = "compact"
     FULL = "full"
+
 
 class DataType(EnumStr):
     JSON = "json"

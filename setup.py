@@ -16,10 +16,12 @@ setup(
     author_email="alasasjohnkyle@gmail.com",
     description="API client for Alpha Vantage",
     long_description=__doc__,
-    packages=["pyvantage",],
+    packages=[
+        "pyvantage",
+    ],
     zip_safe=False,
     include_package_data=True,
-    platforms='any',
+    platforms="any",
     install_requires=[
         "requests",
     ],
