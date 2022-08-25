@@ -11,11 +11,16 @@ setup(
     name="PyVantage",
     version="0.0.1",
     url="https://github.com/jkalasas/pyvantage",
-    license="BSD",
+    license="MIT",
     author="John Kyle Alas-as",
     author_email="alasasjohnkyle@gmail.com",
     description="API client for Alpha Vantage",
     long_description=__doc__,
+    keywords=[
+        "api",
+        "alphavantage",
+        "client",
+    ],
     packages=[
         "pyvantage",
     ],
@@ -24,5 +29,11 @@ setup(
     platforms="any",
     install_requires=[
         "requests",
+    ],
+    classifiers=[
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developer",
+        "License :: OSI Approved :: MIT Liecense",
+        "Programming Language :: Python :: 3",
     ],
 )
