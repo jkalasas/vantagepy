@@ -10,7 +10,6 @@ from setuptools import setup
 setup(
     name="PyVantage",
     version="0.0.1",
-    url="https://github.com/jkalasas/pyvantage",
     license="MIT",
     author="John Kyle Alas-as",
     author_email="alasasjohnkyle@gmail.com",
